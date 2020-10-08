@@ -19,28 +19,29 @@ just create an empty file (the scripts will assume it exists in any case)
 touch set_environment.sh
 ```
 
-then install our modified fairseq
+then patch and install fairseq
 
 ```
-. set_environment.sh    # if used
-git clone git@github.ibm.com:ramon-astudillo/fairseq.git
+. set_environment.sh
+git clone https://github.com/pytorch/fairseq.git
 cd fairseq
-git checkout v0.3.0/decouple-fairseq
+git checkout -b stack-transformer-v0.3.2 a33ac06 
+git apply ../transition_amr_parser/stack_transformer/fairseq_a33ac06.patch
 pip install .
 cd ..
 ```
 
-the main repo
+and the main repo
 
 ```bash
-git clone git@github.ibm.com:mnlp/transition-amr-parser.git
+git clone https://github.com/IBM/transition-amr-parser.git
 cd transition-amr-parser
-git checkout v0.3.0
+git checkout v0.3.2
 pip install .
 cd ..
 ```
 
-and the smatch evaluation tool.
+as well as the smatch evaluation tool.
 
 ```
 git clone https://github.com/snowblink14/smatch.git 
