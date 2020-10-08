@@ -3,26 +3,13 @@ Transition-based AMR Parser
 
 Transition-based parser for Abstract Meaning Representation (AMR) in Pytorch. The code includes two fundamental components.
 
-1. A State machine and oracle transforming the sequence-to-graph task into a sequence-to-sequence problem. This follows the AMR oracles in [(Ballesteros and Al-Onaizan 2017)](https://arxiv.org/abs/1707.07755v1) with improvements from [(Naseem et al 2019)](https://arxiv.org/abs/1905.13370).
+1. A State machine and oracle transforming the sequence-to-graph task into a sequence-to-sequence problem. This follows the AMR oracles in [(Ballesteros and Al-Onaizan 2017)](https://arxiv.org/abs/1707.07755v1) with improvements from [(Naseem et al 2019)](https://arxiv.org/abs/1905.13370) and [Astudillo et al 2020](https://openreview.net/pdf?id=b36spsuUAde)
 
-2. Two structured sequence-to-sequence models able to encode the parse state. This includes stack-LSTM and the stack-Transformer. 
+2. Two structured sequence-to-sequence models able to encode the parse state. This includes stack-LSTM [Dyer et al](https://arxiv.org/pdf/1505.08075.pdf) and the stack-Transformer [Fernandez Astudillo et al 2020](https://openreview.net/pdf?id=b36spsuUAde). 
 
-Current version is `0.3.0`. Initial commit developed by Miguel Ballesteros and Austin Blodgett while at IBM. 
-
-## Using the Parser
-
-- The simplest is to use our endpoint (GRPC service) check [services](https://github.ibm.com/mnlp/transition-amr-parser/wiki/Parsing-Services)
-- to install through the Watson-NLP artifactory, see the [wiki](https://github.ibm.com/mnlp/transition-amr-parser/wiki/Installing-the-python-package-through-Artifactory)
-- to install the parser locally, see below. If you have acess to the CCC there are installers for x86/PPC and pre-trained models available, see the [wiki](https://github.ibm.com/mnlp/transition-amr-parser/wiki/Installing-in-CCC).
-
-Note the the parser consumes word-tokenized text. It is not greatly affected by
-different tokenizers. We reccomend to use the 1NLP tokenizer.
+Current version is `0.3.2`. Initial commit developed by Miguel Ballesteros and Austin Blodgett while at IBM. 
 
 ## Manual Installation
-
-**NOTE:** See if the CCC installers suit your needs first
-[wiki](https://github.ibm.com/mnlp/transition-amr-parser/wiki/Installing-in-CCC).
-Below are the instructions for a generic architecture.
 
 The code has been tested on Python `3.6`. We use a script to activate
 conda/pyenv and virtual environments. If you prefer to handle this yourself
@@ -98,7 +85,3 @@ parser = AMRParser.from_checkpoint(in_checkpoint)
 annotations = parser.parse_sentences([['The', 'boy', 'travels'], ['He', 'visits', 'places']])
 print(annotations.toJAMRString())
 ```
-
-## Training your Model
-
-See the CCC training scripts as example `scripts/stack-transformer/jbsub_experiment.sh`
