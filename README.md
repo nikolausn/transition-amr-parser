@@ -5,7 +5,7 @@ Transition-based parser for Abstract Meaning Representation (AMR) in Pytorch. Th
 
 1. A State machine and oracle transforming the sequence-to-graph task into a sequence-to-sequence problem. This follows the AMR oracles in [(Ballesteros and Al-Onaizan 2017)](https://arxiv.org/abs/1707.07755v1) with improvements from [(Naseem et al 2019)](https://arxiv.org/abs/1905.13370) and [(Fernandez Astudillo et al 2020)](https://openreview.net/pdf?id=b36spsuUAde)
 
-2. Two structured sequence-to-sequence models able to encode the parse state. This includes stack-LSTM [(Dyer et al)](https://arxiv.org/pdf/1505.08075.pdf) and the stack-Transformer [(Fernandez Astudillo et al 2020)](https://openreview.net/pdf?id=b36spsuUAde). 
+2. Two structured sequence-to-sequence models able to encode the parser state. This includes stack-LSTM [(Dyer et al)](https://arxiv.org/pdf/1505.08075.pdf) and the stack-Transformer [(Fernandez Astudillo et al 2020)](https://openreview.net/pdf?id=b36spsuUAde). 
 
 Current version is `0.3.2`. Initial commit developed by Miguel Ballesteros and Austin Blodgett while at IBM. 
 
@@ -31,7 +31,7 @@ pip install .
 cd ..
 ```
 
-and the main repo
+the install the main repo
 
 ```bash
 git clone https://github.com/IBM/transition-amr-parser.git
@@ -47,6 +47,7 @@ as well as the smatch evaluation tool.
 git clone https://github.com/snowblink14/smatch.git 
 cd smatch
 git checkout v1.0.4
+pip install .
 cd ..
 ```
 
