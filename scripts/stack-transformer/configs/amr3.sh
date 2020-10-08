@@ -11,7 +11,7 @@ TASK_TAG=AMR
 # All data stored here
 data_root=DATA/$TASK_TAG/
 
-LDC2020_AMR_CORPUS=/dccstor/multi-parse/preprocess/AMR-3.0
+LDC2020_AMR_CORPUS=$data_root/AMR-3.0
 
 # AMR ORACLE
 # See transition_amr_parser/data_oracle.py:argument_parser
@@ -24,8 +24,8 @@ AMR_TEST_FILE=$LDC2020_AMR_CORPUS/test.merged.txt
 # NOTE: If left empty no wiki will be added
 WIKI_DEV=""
 AMR_DEV_FILE_WIKI=""
-WIKI_TEST=/dccstor/multi-parse/amr/test.wiki
-AMR_TEST_FILE_WIKI=/dccstor/ykt-parse/AMR/2016data/test.txt
+WIKI_TEST=""
+AMR_TEST_FILE_WIKI=""
 # Leave empty to create entity rules from the corpus
 ENTITY_RULES=""
 

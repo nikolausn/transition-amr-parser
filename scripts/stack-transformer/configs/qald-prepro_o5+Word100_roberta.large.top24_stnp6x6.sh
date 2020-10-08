@@ -9,7 +9,7 @@ set -o nounset
 TASK_TAG=AMR
 
 # Global paths
-AMR_CORPORA=/dccstor/ykt-parse/SHARED/CORPORA/AMR/
+AMR_CORPORA=$data_root/AMR/
 
 # All data stored here
 data_root=DATA/$TASK_TAG/

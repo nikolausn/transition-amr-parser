@@ -7,7 +7,6 @@ set -o pipefail
 set -o nounset
 
 # Oracles are precomputed ans stored here
-PTB_ORACLE=/dccstor/ykt-parse/SHARED/MODELS/dep-parsing/transition-amr-parser/oracles/
 
 TASK_TAG=dep-parsing
 

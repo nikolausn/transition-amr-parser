@@ -9,7 +9,7 @@ set -o nounset
 
 # TRAIN DATA
 
-OUT_FOLDER_ROOT=/dccstor/ykt-parse/SHARED/CORPORA/AMR/low_ressource/
+OUT_FOLDER_ROOT=DATA/AMR/low_ressource/
 
 for max_sentences in amr1.0 5000 2500;do
 

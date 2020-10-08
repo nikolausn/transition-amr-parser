@@ -1,6 +1,6 @@
 # Set variables and environment for a give experiment
 #
-# Variables intended to be use outside of this script are CAPITALIZED
+# Variables intended to be used outside of this script are CAPITALIZED
 #
 set -o errexit
 set -o pipefail
@@ -11,7 +11,7 @@ TASK_TAG=AMR
 # All data stored here
 data_root=DATA/$TASK_TAG/
 
-LDC2014_AMR_CORPUS=/dccstor/ykt-parse/SHARED/CORPORA/AMR/AMR_1.0/
+LDC2014_AMR_CORPUS=$data_root/AMR/AMR_1.0/
 
 # AMR ORACLE
 # See transition_amr_parser/data_oracle.py:argument_parser
