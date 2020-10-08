@@ -11,7 +11,7 @@ TASK_TAG=AMR
 # All data stored here
 data_root=DATA/$TASK_TAG/
 
-LDC2014_AMR_CORPUS=$data_root/AMR/AMR_1.0/
+LDC2014_AMR_CORPUS=$data_root/AMR_1.0/
 
 # AMR ORACLE
 # See transition_amr_parser/data_oracle.py:argument_parser
